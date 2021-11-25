@@ -8,7 +8,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y zip jq curl
           echo -e "machine github.com\n  login ${GH_DEPLOY_KEY}" > ~/.netrc
-          chmod +x .scripts/buildPack.sh
-          chmod +x .scripts/deploy.sh
+          chmod +x ./scripts/buildPack.sh
+          chmod +x ./scripts/deploy.sh
       - run: ./scripts/buildPack.sh
       - run: ./scripts/deploy.sh
