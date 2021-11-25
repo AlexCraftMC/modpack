@@ -10,5 +10,5 @@ jobs:
           echo -e "machine github.com\n  login ${GH_DEPLOY_KEY}" > ~/.netrc
           chmod +x .scripts/buildPack.sh
           chmod +x .scripts/deploy.sh
-      - run: .scripts/buildPack.sh
-      - run: .scripts/deploy.sh
+      - run: ./scripts/buildPack.sh
+      - run: ./scripts/deploy.sh
