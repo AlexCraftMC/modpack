@@ -2,7 +2,7 @@
     "version": "1.0.6",
     "mods": {
         "urls": [
-            "https://github.com/AlexCraftMC/modpack/raw/main/overrides/mods/OptiFine_1.16.5_HD_U_G8.jar"
+            "https://raw.githubusercontent.com/AlexCraftMC/modpack/main/mods/OptiFine_1.16.5_HD_U_G8.jar"
         ],
         "curse": [
             {
