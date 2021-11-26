@@ -14,7 +14,7 @@ const zip = require('node-zip');
 const config = require('../modpack.json');
 
 // Constants
-const build_root = "../tmp/build";
+const build_root = "/tmp/build";
 const minecraft_version = "1.16.5";
 const forge_version = "36.2.0";
 
@@ -81,7 +81,7 @@ function downloadFile(url, path) {
 // Stages
 function init() {
     try {
-        mkdirIfNotExists('../tmp/')
+        mkdirIfNotExists('/tmp/')
         mkdirIfNotExists(build_root);
         mkdirIfNotExists(`${build_root}/bin`);
         mkdirIfNotExists(`${build_root}/mods`);

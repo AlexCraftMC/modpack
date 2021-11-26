@@ -14,8 +14,8 @@ jobs:
         node-version: '12'
     - run: (cd scripts && yarn)
     - run: (cd scripts && node build.js)
-    - run: zip modpack.zip ./tmp/bin ./tmp/mods ./servers.dat
+    - run: zip modpack.zip /tmp/bin /tmp/mods ./servers.dat
     - uses: actions/upload-artifact@v2
       with:
-        name: modpack
+        name: modpack.zip
         path: modpack.zip
