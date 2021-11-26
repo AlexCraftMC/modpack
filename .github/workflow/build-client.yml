@@ -1,0 +1,21 @@
+name: Modpack Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+    - run: yarn
+    - run: (cd scripts && node build.js)
+    - run: zip modpack.zip ./tmp/bin ./tmp/mods ./servers.dat
+    - uses: actions/upload-artifact@v2
+      with:
+        name: modpack
+        path: modpack.zip
