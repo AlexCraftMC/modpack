@@ -12,7 +12,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12'
-    - run: yarn
+    - run: (cd scripts && yarn)
     - run: (cd scripts && node build.js)
     - run: zip modpack.zip ./tmp/bin ./tmp/mods ./servers.dat
     - uses: actions/upload-artifact@v2
